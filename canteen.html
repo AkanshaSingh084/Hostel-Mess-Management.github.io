@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Canteen Portal</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css" rel="stylesheet">
+    <link rel="stylesheet" href="portals/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="portals/assets/css/core.min.css">
+    <link rel="stylesheet" href="portals/assets/css/components.min.css">
+    <link rel="stylesheet" href="portals/assets/icons_fonts/styles.min.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <div class="page-content">
+           
+            <!-- PAGE CONTENT -->
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">CANTEEN PORTAL</h4>
+                                    <!-- <legend class="content-group-sm card-subtitle text-bold">HOSTEL ROLL NO -> ABC</legend> -->
+                                    <fieldset class="content-group">
+                                        <form id="payment" name="payment" method="POST" action="make-payment-process">
+                                            <input type="hidden" name="csrf1"
+                                                value="QVJCZlFKa2U5b1Ewckc0RHdjWWE2eEoxTEFxQkkwa3ZLRG9yWnFNa2djWTNLTUZjWkRudVg5M0Q4TzhsNm92WQ=="><input
+                                                type="hidden" name="csrf2"
+                                                value="TjJveGpISXNwT1hUZUcrZlZ6WnBvTUdUQnJ2dnNFU2ZkRzVOYjNwdUN2dz0="><input
+                                                type="hidden" name="csrf3"
+                                                value="MUtEcGtmdlNzNnA4UjhaN0o0OEJ5cEwyMWlSKzJaVDlNMWlEWk01RytzeUVMaUplTVFPUTg3Ykh6cnRNa25ieA=="><input
+                                                type="hidden" name="csrf4"
+                                                value="QVJCZlFKa2U5b1Ewckc0RHdjWWE2KzRCbWFPOVhhY0NrU1BtWVJDbXNGWT0=">
+                                            
+                                                <div class="form-group row margin-top-10">
+                                                    <div class="col-md-2">
+                                                        <label class="control-label col-form-label">Enter Student Roll No.</label>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon" id="basic-addon1"></span>
+                                                            <input autocomplete="off" type="number" name="amount"
+                                                                id="amount" min="1" max="99999999" class="form-control"
+                                                                placeholder="Enter Roll No." value="" required
+                                                                aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                                <div class="form-group row margin-top-10">
+                                                
+
+                                                <div class="col-md-2">
+                                                    <label class="control-label col-form-label">Select Item</label>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon" id="basic-addon1">
+                                                            </span>
+                                                        <select name="feecat" id="feecat" class="form-control show-tick"
+                                                            required onchange="reload3(this.form)">
+                                                            <option value="">Select</option>
+                                                            <option value="9">Cold Coffee
+                                                            </option>
+                                                            <option value="13">Hot Coffee</option>
+                                                            <option value="1">Mango Shake</option>
+                                                            <option value="7">Macroni</option>
+                                                            <option value="8">Noodles</option>
+                                                            <option value="8">Red Sauce Pasta</option>
+                                                            <option value="4">OTHERS</option>
+                                                            
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="form-group row margin-top-10">
+                                                <div class="col-md-2">
+                                                    <label class="control-label col-form-label">Amount</label>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon" id="basic-addon1"></span>
+                                                        <input autocomplete="off" type="number" name="amount"
+                                                            id="amount" min="1" max="99999999" class="form-control"
+                                                            placeholder="Enter Amount" value="" required
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row margin-top-10">
+                                                <div class="col-md-2">
+                                                    <label class="control-label col-form-label">Description
+                                                        <!-- <sup>#</sup> -->
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon" id="basic-addon1"></span>
+                                                        <input required autocomplete="off" type="text" name="remarks"
+                                                            id="remarks" class="form-control"
+                                                            placeholder="Enter description. "
+                                                            value="" aria-describedby="basic-addon1"
+                                                            pattern="^[a-zA-Z0-9._\-/ ]*$">
+                                                        <br /> <br /> <br />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pull-right">
+                                                <button type="submit" class="btn btn-primary">Add 
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </fieldset>
+                                    <table class="table table-bordered table-hover" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="top-left">#</th>
+                                                
+                                                <th class="top-left ">Item Details</th>
+                                                <th class="top-left ">Description</th>
+                                                <th class="top-left">Amount</th>
+                                                <th class="top-left">Date</th>
+                                                <th class="top-left"> </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    <script src="portals/jslib_js/jquery.min.js"></script>
+    <script src="portals/jslib_js/tether.min.js"></script>
+    <script src="portals/jslib_js/bootstrap.min.js"></script>
+    <script src="portals/assets/js/app.min.js"></script>
+    <script src="portals/js/disable-function.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+
+     <link rel="stylesheet" href="LOGIN-hostel project/login.css">
+</head>
+<body>
+    
+
+<br>
+<br>
+    <div class="cont">
+        <div class="form sign-in">
+            <h3 class="h23">MESS LOGIN PORTAL</h3>
+            <label>
+                <span>Email</span>
+                <input type="email" />
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" />
+            </label>
+            <p class="forgot-pass">Forgot password?</p>
+            <a href = "mess.html"><button type="button" class="submit"> Login </button></a>
+         
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                 
+                    <h3>Login here,<h3>
+                    <h3>for canteen portal<h3>
+                </div>
+                <div class="img__text m--in">
+                
+                    <h3>Login here,<h3>
+                    <h3>for mess portal<h3>
+                </div>
+                <div class="img__btn" >
+                    <span class="m--up" >&#8594</span>
+                    <span class="m--in">&#8592</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h3 class="h33">CANTEEN LOGIN PORTAL</h3 >
+                
+                <label>
+                    <span>Email</span>
+                    <input type="email" />
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" />
+                </label>
+                <p class="forgot-pass">Forgot password?</p>
+                <a href = "canteen.html"><button type="button" class="submit"> Login </button></a>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+    </script>
+
+   
+
+</body>
+</html>
